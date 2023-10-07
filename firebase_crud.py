@@ -19,11 +19,10 @@ def select(collection):
         print(f"ID do documento: {doc.id}")
         print(f"Dados: {doc.to_dict()}")
     
-# Dados a serem adicionados
+    
 def insert(collection, data: dict):
-    # Adicionar o documento à coleção
     doc_ref = collection.add(data)
-    doc_reference, doc_id = doc_ref
+    doc_id = doc_ref
     print("Documento adicionado com id:", doc_id)
 
 def update(collection, document_id, data: dict):
@@ -39,10 +38,10 @@ def delete(collection, document_id):
     print("Document deleted!")
 
 data = {
-        "display_name": "Paty",
-        "email": "patricia.cabral@qwst.co",
+        "display_name": "teste",
+        "email": "teste@gmail.com",
         "password": "123456"
     }
 
 select(users_ref)
-#delete(users_ref, "0Yh18F07JW0shAXDkWZR")
+#delete(users_ref, "")
